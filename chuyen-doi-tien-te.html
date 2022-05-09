@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+    <style>
+        table {
+            width: 500px;
+            height: 150px;
+            text-align: center;
+        }
+        button {
+            background-color: cornflowerblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form>
+<table>
+  <tr>
+      <th>Amount</th>
+      <th>From Currency</th>
+      <th>To Curency</th>
+      <th></th>
+  </tr>
+  <tr>
+      <td><input type="text" id="tienvao"></input></td>
+        <td><select id="select1">
+            <option value="a1" >VietNam</option>
+            <option value="b1">USD</option>
+        </select>
+        </td>
+        <td><select id="select2">
+            <option value="a1">VietNam</option>
+            <option value="b1">USD</option>
+        </select>
+        </td>
+      <td><button onclick="Chuyendoi();">Convert</button></td>
+  <tr>
+ </tr>
+</table>
+</form>
+    <script>
+        function Chuyendoi() {
+            let F = document.getElementById("tienvao").value
+            let E = document.getElementById("select1").value
+            let G = document.getElementById("select2").value
+            let ketqua = F
+            if (E == G)
+            {ketqua=F}
+            if (E == "a1" && G == "b1")
+            {ketqua=F/23000}
+            if (E == "b1" && G == "a1")
+            {ketqua=F*23000}
+            document.write(ketqua)
+        }
+    </script>
+</body>
+</html>
