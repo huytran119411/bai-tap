@@ -16,7 +16,6 @@
     </style>
 </head>
 <body>
-<form>
 <table>
   <tr>
       <th>Amount</th>
@@ -37,10 +36,11 @@
         </select>
         </td>
       <td><button onclick="Chuyendoi();">Convert</button></td>
-  <tr>
  </tr>
+    <tr>
+        <td id="kq"></td>
+    </tr>
 </table>
-</form>
     <script>
         function Chuyendoi() {
             let F = document.getElementById("tienvao").value
@@ -53,7 +53,7 @@
             {ketqua=F/23000}
             if (E == "b1" && G == "a1")
             {ketqua=F*23000}
-            document.write(ketqua)
+            document.getElementById("kq").innerHTML=ketqua
         }
     </script>
 </body>
