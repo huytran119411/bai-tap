@@ -26,13 +26,13 @@
   <tr>
       <td><input type="text" id="tienvao"></input></td>
         <td><select id="select1">
-            <option value="a1" >VietNam</option>
-            <option value="b1">USD</option>
+            <option value="23000" >VietNam</option>
+            <option value="1">USD</option>
         </select>
         </td>
         <td><select id="select2">
-            <option value="a1">VietNam</option>
-            <option value="b1">USD</option>
+            <option value="23000">VietNam</option>
+            <option value="1">USD</option>
         </select>
         </td>
       <td><button onclick="Chuyendoi();">Convert</button></td>
@@ -46,13 +46,7 @@
             let F = document.getElementById("tienvao").value
             let E = document.getElementById("select1").value
             let G = document.getElementById("select2").value
-            let ketqua = F
-            if (E == G)
-            {ketqua=F}
-            if (E == "a1" && G == "b1")
-            {ketqua=F/23000}
-            if (E == "b1" && G == "a1")
-            {ketqua=F*23000}
+            let ketqua = F / E * G
             document.getElementById("kq").innerHTML=ketqua
         }
     </script>
