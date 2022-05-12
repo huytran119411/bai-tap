@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+<head>
+</head>
+<body>
+<form action="#" id="form">
+<table>
+    <tr>
+        <th colspan="4"><div class="result"><input name="hienthi" id="lenh" ></div></th>
+    </tr>
+    <tr>
+        <td><input type="button" id="so1" value="1" onclick="viet(so1.value)"></td>
+        <td><input type="button" id="so2" value="2" onclick="viet(so2.value)"></td>
+        <td><input type="button" id="so3" value="3" onclick="viet(so3.value)"></td>
+        <td><input type="button" id="cong" value="+" onclick="viet(cong.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="so4" value="4" onclick="viet(so4.value)"></td>
+        <td><input type="button" id="so5" value="5" onclick="viet(so5.value)"></td>
+        <td><input type="button" id="so6" value="6" onclick="viet(so6.value)"></td>
+        <td><input type="button" id="tru" value="-" onclick="viet(tru.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="so7" value="7" onclick="viet(so7.value)"></td>
+        <td><input type="button" id="so8" value="8" onclick="viet(so8.value)"></td>
+        <td><input type="button" id="so9" value="9" onclick="viet(so9.value)"></td>
+        <td><input type="button" id="nhan" value="*" onclick="viet(nhan.value)"></td>
+    </tr>
+    <tr>
+        <td><button name="C" type="reset" >C</button></td>
+        <td><input type="button" id="so0" value="0" onclick="viet(so0.value)"></td>
+        <td><input type="button" id="bang" value="=" onclick="calculate();"></td>
+        <td><input type="button" id="chia" value="/" onclick="viet(chia.value)"></td>
+    </tr>
+</table>
+</form>
+<script>
+function viet(result){
+form.hienthi.value = form.hienthi.value + result;
+}
+
+</script>
+</body>
+</html>
