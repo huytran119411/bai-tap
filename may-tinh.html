@@ -5,44 +5,38 @@
     <title>Title</title>
 </head>
 <body>
-<form action="#" name="form">
-
-        <div class="result">
-            <input type="text" name="disp" id="disp">
-        </div>
-        <div class="buttons">
-    <div class="row">
-        <input type="button" value="1" name="v1" onclick="val(v1.value)">
-        <input type="button" value="2" name="v2" onclick="val(v2.value)">
-        <input type="button" value="3" name="v3" onclick="val(v3.value)">
-        <input type="button" value="+" name="cong" onclick="val(cong.value)">
-    </div>
-    <div class="row">
-        <input type="button" value="4" name="v4" onclick="val(v1.value)">
-        <input type="button" value="5" name="v5" onclick="val(v2.value)">
-        <input type="button" value="6" name="v6" onclick="val(v3.value)">
-        <input type="button" value="-" name="tru" onclick="val(tru.value)">
-    </div>
-    <div class="row">
-        <input type="button" value="7" name="v7" onclick="val(v7.value)">
-        <input type="button" value="8" name="v8" onclick="val(v8.value)">
-        <input type="button" value="9" name="v9" onclick="val(v9.value)">
-        <input type="button" value="x" name="nhan" onclick="val(nhan.value)">
-    </div>
-    <div class="row">
-        <button type="reset" name="C">C</button>
-        <input type="button" value="0" name="v0" onclick="val(v0.value)">
-        <input type="button" value="=" name="bang" onclick="val(bang.value)">
-        <input type="button" value="/" name="chia" onclick="val(chia.value)">
-    </div>
-    </div>
-    </div>
-</form>
+<h1>Calculator</h1>
+<input type="text" id="number1">
+<input type="text" id="number2"><br><br>
+<button onclick="add()">Add(+)</button>
+<button onclick="sub()">Sub(-)</button>
+<button onclick="multi()">Multi(x)</button>
+<button onclick="div()">Div(/)</button>
+<p>Result: <span id="result"></span></p>
+</body>
 <script>
-    function val(result){
-        form.disp.value = form.disp.value + result;
+    function add() {
+        let num1 = parseFloat(document.getElementById("number1").value)
+        let num2 = parseFloat(document.getElementById("number2").value)
+        document.getElementById("result").innerHTML = (num1 + num2)
     }
 
+    function sub() {
+        let num1 = parseFloat(document.getElementById("number1").value)
+        let num2 = parseFloat(document.getElementById("number2").value)
+        document.getElementById("result").innerHTML = (num1 - num2)
+    }
+
+    function multi() {
+        let num1 = parseFloat(document.getElementById("number1").value)
+        let num2 = parseFloat(document.getElementById("number2").value)
+        document.getElementById("result").innerHTML = (num1 * num2)
+    }
+
+    function div() {
+        let num1 = parseFloat(document.getElementById("number1").value)
+        let num2 = parseFloat(document.getElementById("number2").value)
+        document.getElementById("result").innerHTML = (num1 / num2)
+    }
 </script>
-</body>
 </html>
