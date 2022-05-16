@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Caro Game Simple </h2>
+
+<p id= "caro"></p>
+
+<button id="change-value" onclick="changevalue();">Change Value</button><br>
+<script>
+    let x=[
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0],
+            [0,0,0,0,0]
+    ]
+    let data=""
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += x[i][j] + "&nbsp;&nbsp;"
+        }
+    }
+    document.getElementById("caro").innerHTML = data;
+
+    function changevalue() {
+        a = +prompt("Nhập vị trí phần tử cần thay đổi")
+        b = +prompt("Nhập giá trị phần tử cần thay đổi")
+        data=""
+        x[a][b] = "X"
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += x[i][j] + "&nbsp;&nbsp;"
+            }
+        }
+        document.getElementById("caro").innerHTML = data
+    }
+</script>
+</body>
+</html>
