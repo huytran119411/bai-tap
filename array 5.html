@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi= prompt("Nhập Chuỗi")
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for (var x = 0; x < chuoi.length; x++) {
+        if (UPPER.indexOf(chuoi[x]) !== -1) {
+            result.push(chuoi[x].toLowerCase());
+        } else if (LOWER.indexOf(chuoi[x]) !== -1) {
+            result.push(chuoi[x].toUpperCase());
+        } else {
+            result.push(chuoi[x]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>
