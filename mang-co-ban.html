@@ -16,25 +16,26 @@
 <!--</script>-->
 
 <!--Bai tap 2-->
-<!--<script>-->
-<!--    let a=246-->
-<!--    let b=a.toString()-->
-<!--    let c= [b[0]]-->
-<!--    for (let i=1; i < 3;i++) -->
-<!--    {-->
-<!--        if ((b[i-1]%2 === 0) && (b[i]%2 ===0)) {-->
-<!--            c.push('-',b[i])-->
-<!--        } else {-->
-<!--            c.push(b[i])-->
-<!--        }-->
-<!--    }-->
-<!--   document.write(c.join(''));-->
-<!--    -->
-<!--    Bai tap 3-->
-
 <script>
-    let a = prompt("Nhập câu")
-    let b =
+    let a= prompt("nhập dãy số")
+    let b = a.toString()
+    let c= [b[0]]
+
+    for (let i=1; i < b.length;i++)
+    {
+        if ((b[i-1]%2 === 0) && (b[i]%2 ===0)) {
+            c.push('-',b[i])
+        } else {
+            c.push(b[i])
+        }
+    }
+   document.write(c.join(''));
+//     <
+// <!--    Bai tap 3-->
+//
+// <script>
+//     let a = prompt("Nhập câu")
+//     let b =
 </script>
 
 </html>
