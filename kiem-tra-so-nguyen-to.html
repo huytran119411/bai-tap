@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(x) {
+        let count = 0
+        for (i = 0; i < x; i++) {
+            for (j = 1; j <= x; j++) {
+                if (x % j === 0) {
+                    count += 1
+                }
+            }
+            if (count === 2) {
+                result = x + " là số nguyên tố"
+            }else{
+                result = x + " không là số nguyên tố"
+            }
+        }
+        return result;
+    }
+let a = +prompt("Nhập số cần kiểm tra")
+    let snt=isPrime(a)
+    document.write(snt)
+</script>
+</body>
+</html>
