@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="alertMessage()">Bài 1</button>
+<br>
+<button onclick="nhapSo();">Bài 2</button><br>
+<button onclick="kiemTraSao();">Bài 5</button>
+<br>
+</body>
+<script>
+    // Bài 1
+
+    function alertMessage() {
+        let message = "hello"
+        alert(message)
+    }
+
+    // Bài 2
+
+    function nhapSo(a) {
+        a = +prompt("Nhập Số a")
+        let number = a + 1
+        alert(number)
+    }
+
+    // Bài 3
+    // function kiemTra2So(a, b) {
+    //     if (a > b) {
+    //         result = "Số " + a + " lớn hơn số " + b
+    //         alert(result)
+    //     } if (a<=b)
+    //         result = a + b
+    //     return result
+    // }
+    // let x = +prompt("Nhập số thứ 1")
+    // let y = +prompt("Nhập số thứ 2")
+    // document.write(kiemTra2So(x, y))
+
+    // Bài 4
+    // function addNumbers() {
+    //     firstNum = 4;
+    //     secondNum = 8;
+    //     result = firstNum + secondNum;
+    //     return result;
+    // }
+    //
+    // result = 0;
+    // alert("Kết quả trước khi chạy hàm =" + result);
+    // alert("Kết quả sau khi chạy hàm =" + (result = addNumbers()));
+
+    // Bài 5
+    function kiemTraSao(a) {
+        a = [prompt("Nhập vàp tên ngôi sao")]
+        let ketqua=[]
+        let sao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        let sao2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        for (i = 0; i <= sao1.length; i++) {
+            if (a[0] === sao1[i]) {
+                ketqua = sao2[i]
+            }
+        }
+         alert(ketqua)
+    }
+
+
+</script>
+</html>
