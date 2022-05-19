@@ -21,7 +21,7 @@
 <br>
 <button onclick="daoNguoc()">Bài 8</button>
 <br>
-<button onclick="kiemTraSo()">Bài 9</button>
+<button onclick="kiemTraHienThi()">Bài 9</button>
 <br>
 </body>
 <script>
@@ -98,13 +98,40 @@
         let temp2 = b
         a = temp2
         b = temp1
-        alert(a +","+ b)
+        alert(a + "," + b)
         // alert("Số b sau khi đổi chổ là: " + b)
     }
 
     // Bài 8
-    function daoNguoc(a) {
+    function daoNguoc() {
+        let n = +prompt("Nhập số phần tử của mảng")
+        let array = new Array(n)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = +prompt("Nhập giá trị của phần tử thứ " + (i + 1))
+        }
+        let resul = array.reverse()
+        alert(array)
     }
 
+    // Bài 9
+    function kiemTraHienThi() {
+        let n = +prompt("Nhập số phần tử của mảng")
+        let array = new Array(n)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Nhập giá trị của phần tử thứ " + (i + 1))
+        }
+        let kiTu = prompt("Nhập kí tự cần tìm trong mảng")
+        let count = 0
+        for (let x = 0; x <= array.length; x++) {
+            if (kiTu[0] === array[x]) {
+                count = count + 1
+            }
+        }
+        if (count > 0) {
+            alert("Số lần hiển thị của kí tự " + kiTu + " là: " + count)
+        } else {
+            alert(-1)
+        }
+    }
 </script>
 </html>
