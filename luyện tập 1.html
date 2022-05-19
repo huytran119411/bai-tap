@@ -7,7 +7,8 @@
 <body>
 <button onclick="alertMessage()">Bài 1</button>
 <br>
-<button onclick="nhapSo();">Bài 2</button><br>
+<button onclick="nhapSo();">Bài 2</button>
+<br>
 <button onclick="kiemTraSao();">Bài 5</button>
 <br>
 </body>
@@ -55,7 +56,7 @@
     // Bài 5
     function kiemTraSao(a) {
         a = [prompt("Nhập vào tên ngôi sao")]
-        let ketqua=[]
+        let ketqua = 0
         let sao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
         let sao2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
         for (i = 0; i <= sao1.length; i++) {
@@ -63,7 +64,11 @@
                 ketqua = sao2[i]
             }
         }
-         alert(ketqua)
+        if (ketqua === 0) {
+            alert("Không tìm thấy ngôi sao")
+        } else {
+            alert(ketqua)
+        }
     }
 
 
