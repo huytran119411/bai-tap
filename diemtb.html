@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span> Lý: </span> <input type="text" id="Ly"> <br> <br>
+<span> Hóa: </span> <input type="text" id="Hoa"> <br> <br>
+<span> Sinh: </span> <input type="text" id="Sinh"> <br> <br>
+<button onclick="tinh()">Tính</button>
+<br>
+<p id="result"></p>
+</body>
+<script>
+    function tinh() {
+        let a = parseInt(document.getElementById("Ly").value)
+        let b = parseInt(document.getElementById("Hoa").value)
+        let c = parseInt(document.getElementById("Sinh").value)
+        let dtb = (a + b + c) / 3
+        document.getElementById("result").innerHTML = dtb
+    }
+</script>
+</html>

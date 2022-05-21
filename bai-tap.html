@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+</body>
+<script>
+    let D = ["a", "b", "c", "A"]
+    for (let i = 0; i < D.length; i++) {
+        if (D[i] === D[i].toLowerCase()) {
+            D[i] = D[i].toUpperCase()
+        } else {
+            if (D[i] === D[i].toUpperCase()) {
+                D[i] = D[i].toLowerCase()
+            }
+        }
+    }
+    document.write(D)
+</script>
+</html>
