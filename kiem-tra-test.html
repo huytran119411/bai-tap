@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+
+    // Bài 1
+
+    // function max3(arr) {
+    //     let max = arr[0]
+    //     let max2 = arr[0]
+    //     let max3 = arr[0]
+    //
+    //     for(let i=0;i<arr.length;i++){
+    //         if(max < arr[i]){
+    //             max = arr[i]
+    //         }
+    //     }
+    //     for(let k=0;k<arr.length;k++){
+    //         if(max2<arr[k]&&arr[k]<max){
+    //             max2 = arr[k]
+    //         }
+    //     }
+    //     for(let j=0;j<arr.length;j++){
+    //         if (max3<arr[j]&&arr[j]<max2){
+    //             max3 = arr[j]
+    //         }
+    //     }
+    //     return max3
+    // }
+    //
+    // let a=[7,1,1,1,1,1,2,3,5,1,1,8,9,9,9,8,5,7,7,7]
+    // let ketQua=max3(a)
+    // document.write(ketQua)
+
+    // Bài 2
+
+    function tryRemoveFromArray(arr,index){
+        let arrNew= []
+        for(let i=0;i<arr.length;i++){
+            if(index>=arr.length){
+                arrNew=arr
+                break
+            }
+            if(i!==index){
+                arrNew.push(arr[i])
+            }
+        } return arrNew
+    }
+
+    let a=[1,2,3,4,5]
+    let b=5
+    let ketQua=tryRemoveFromArray(a,b)
+    document.write(ketQua)
+
+
+</script>
+</html>

@@ -7,16 +7,23 @@
 <body>
 </body>
 <script>
-    let D = ["a", "b", "c", "A"]
-    for (let i = 0; i < D.length; i++) {
-        if (D[i] === D[i].toLowerCase()) {
-            D[i] = D[i].toUpperCase()
-        } else {
-            if (D[i] === D[i].toUpperCase()) {
-                D[i] = D[i].toLowerCase()
+    msg = 'codegym';
+    for(var x = 4; x < msg.length + 1; x++)
+    {
+        if(msg.length == 3)
+        {
+            for (var i = 2; i < 7; i++)
+            {
+                console.log(i);
+            }
+        }
+        else
+        {
+            for (var i = msg.length;  i > (msg.length - 3); i--)
+            {
+                console.log(i);
             }
         }
     }
-    document.write(D)
 </script>
 </html>
